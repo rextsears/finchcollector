@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ finch.name }} Details</h1>
+<p><strong>Scientific Name:</strong> {{ finch.scientific_name }}</p>
+<p><strong>Habitat:</strong> {{ finch.habitat }}</p>
+<!-- Add more attributes as needed -->
+<a href="{% url 'finch_list' %}">Back to All Finches</a>
+{% endblock %}
