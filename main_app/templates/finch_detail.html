@@ -4,6 +4,31 @@
 <h1>{{ finch.name }} Details</h1>
 <p><strong>Scientific Name:</strong> {{ finch.scientific_name }}</p>
 <p><strong>Habitat:</strong> {{ finch.habitat }}</p>
-<!-- Add more attributes as needed -->
-<a href="{% url 'finch_list' %}">Back to All Finches</a>
+
+<h2>Feedings</h2>
+<ul>
+    {% for feeding in finch.feedings.all %}
+        <li>{{ feeding.date }} - {{ feeding.food_type }}</li>
+    {% empty %}
+        <li>No feedings recorded for this finch.</li>
+    {% endfor %}
+</ul>
+
+<h2>Add a Feeding</h2>
+<form method="post" action="{% url 'add_feeding' finch.id %}">
+    {% csrf_token %}
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+    <br>
+    <label for="food_type">Food Type:</label>
+    <input type="text" id="food_type" name="food_type" required>
+    <br>
+    <input type="submit" value="Add Feeding">
+</form>
+
+<a href="{% url 'finch_list' %}" class="btn btn-secondary">Back to All Finches</a>
+
+<a href="{% url 'edit_finch' finch.id %}" class="btn btn-primary">Edit Finch</a>
+
+<a href="{% url 'delete_finch' finch.id %}" class="btn btn-danger">Delete Finch</a>
 {% endblock %}
