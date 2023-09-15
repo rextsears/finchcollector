@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from main_app import views
-from main_app.views import FinchCreateView, FinchUpdateView, FinchDeleteView
+from main_app.views import FinchCreateView, FinchUpdateView, FinchDeleteView, ToyCreateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +26,8 @@ urlpatterns = [
     path('finches/create/', FinchCreateView.as_view(), name='add_finch'),
     path('finches/<int:pk>/edit/', FinchUpdateView.as_view(), name='edit_finch'),
     path('finches/<int:pk>/delete/', FinchDeleteView.as_view(), name='delete_finch'),
+    path('finches/', views.finch_list, name='finch_list'),
     path('finch/<int:finch_id>/add-feeding/', views.add_feeding, name='add_feeding'),
+    path('toys/create/<int:finch_id>/', ToyCreateView.as_view(), name='toy_create'),
+    path('finch/<int:finch_id>/add-toy/', views.add_toy, name='add_toy'),
 ]

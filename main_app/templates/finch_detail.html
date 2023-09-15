@@ -17,13 +17,37 @@
 <h2>Add a Feeding</h2>
 <form method="post" action="{% url 'add_feeding' finch.id %}">
     {% csrf_token %}
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date" required>
+    <label for="feeding_date">Date:</label>
+    <input type="date" id="feeding_date" name="feeding_date" required>
     <br>
     <label for="food_type">Food Type:</label>
     <input type="text" id="food_type" name="food_type" required>
     <br>
+    <label for="notes">Notes:</label>
+    <textarea id="notes" name="notes" required></textarea>
+    <br>
     <input type="submit" value="Add Feeding">
+</form>
+
+<h2>Toys</h2>
+<ul>
+    {% for toy in finch.toys.all %}
+        <li>{{ toy.name }} - {{ toy.description }}</li>
+    {% empty %}
+        <li>No toys for this finch.</li>
+    {% endfor %}
+</ul>
+
+<h2>Add a Toy</h2>
+<form method="post" action="{% url 'add_toy' finch_id=finch.id %}">
+    {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+    <br>
+    <input type="submit" value="Add Toy">
 </form>
 
 <a href="{% url 'finch_list' %}" class="btn btn-secondary">Back to All Finches</a>
