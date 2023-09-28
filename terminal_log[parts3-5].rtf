@@ -1,0 +1,2377 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red125\green125\blue125;\red252\green30\blue98;
+\red49\green179\blue255;\red46\green174\blue187;\red47\green180\blue29;\red255\green255\blue255;\red200\green20\blue201;
+\red159\green160\blue28;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c56390\c56390\c56390;\cssrgb\c100000\c23390\c45833;
+\cssrgb\c21868\c75661\c100000;\cssrgb\c20199\c73241\c78251;\cssrgb\c20241\c73898\c14950;\csgray\c100000;\cssrgb\c83397\c23074\c82666;
+\cssrgb\c68469\c68012\c14211;}
+{\info
+{\author Rex Sears}
+{\*\copyright Rex Sears}}\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf2 \CocoaLigature0 Last login: Tue Sep 12 15:03:38 on ttys000\
+\cf3 rextsears \cf4 ~ \cf2  $ cd code\
+\cf3 rextsears \cf4 ~/code \cf2  $ ls\
+Callbacks_and_Arrow_Functions_WBP	avocodos-example\
+Consuming-3rd-Party-APIs-Lab		daily_coding_7_31\
+DOM Lab					dom-practice\
+Express_Practice_Lab			express-dev-skills\
+Flexbox_CSSGrid_Lab			express-dev-skills\{clone\}\
+Flexbox_CSSGrid_Lab_firsttry		express-todos\
+JS_Callback_Functions_Lab		finchcollector\
+JS_Classes				first-node\
+M2L4-express-routers-controllers-wbp	fizzbuzz.py\
+Mancala					intro-express\
+MediaQueries				mongoose-flights\
+Misc					mongoose-movies\
+Project Plan Instructions.docx		mysite\
+Tic-Tac-Toe				sei-avocados\
+[Default Files]				sql-lab\
+[Instructions, Procedures, etc.]	tic-tac-toe attempt\
+[Misc] Scratch Work			track-track\
+[Passwords, etc.]\
+\cf3 rextsears \cf4 ~/code \cf2  $ cd finchcollector\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ code .\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py makemigrations\
+Traceback (most recent call last):\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 22, in <module>\
+    main()\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 18, in main\
+    execute_from_command_line(sys.argv)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line\
+    utility.execute()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 416, in execute\
+    django.setup()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/__init__.py", line 24, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/apps/registry.py", line 116, in populate\
+    app_config.import_models()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/apps/config.py", line 269, in import_models\
+    self.models_module = import_module(models_module_name)\
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/main_app/models.py", line 2, in <module>\
+    from main_app.models import Finch\
+ImportError: cannot import name 'Finch' from partially initialized module 'main_app.models' (most likely due to a circular import) (/Users/rextsears/code/finchcollector/main_app/models.py)\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py makemigrations\
+
+\f1\b \cf6 Migrations for 'main_app':
+\f0\b0 \cf2 \
+  
+\f1\b main_app/migrations/0002_feeding.py
+\f0\b0 \
+    - Create model Feeding\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py migrate\
+
+\f1\b \cf6 Operations to perform:
+\f0\b0 \cf2 \
+
+\f1\b   Apply all migrations: 
+\f0\b0 admin, auth, contenttypes, main_app, sessions\
+
+\f1\b \cf6 Running migrations:
+\f0\b0 \cf2 \
+  Applying main_app.0002_feeding...
+\f1\b \cf7  OK
+\f0\b0 \cf2 \
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ ls\
+db.sqlite3			manage.py\
+finchcollector			terminal_log[parts1-2].rtf\
+main_app\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ terminal_log[parts1-2].rtf .\
+zsh: no matches found: terminal_log[parts1-2].rtf\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ terminal_log[parts1-2].rtf\
+zsh: no matches found: terminal_log[parts1-2].rtf\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ terminal_log[parts1-2].rtf open\
+zsh: no matches found: terminal_log[parts1-2].rtf\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ open terminal_log[parts1-2].rtf\
+zsh: no matches found: terminal_log[parts1-2].rtf\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ open ~/code/finchcollector/terminal_log[parts1-2].rtf\
+zsh: no matches found: /Users/rextsears/code/finchcollector/terminal_log[parts1-2].rtf\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ open\
+Usage: open [-e] [-t] [-f] [-W] [-R] [-n] [-g] [-h] [-s <partial SDK name>][-b <bundle identifier>] [-a <application>] [-u URL] [filenames] [--args arguments]\
+Help: Open opens files from a shell.\
+      By default, opens each file using the default application for that file.  \
+      If the file is in the form of a URL, the file will be opened as a URL.\
+Options: \
+      -a                    Opens with the specified application.\
+      -b                    Opens with the specified application bundle identifier.\
+      -e                    Opens with TextEdit.\
+      -t                    Opens with default text editor.\
+      -f                    Reads input from standard input and opens with TextEdit.\
+      -F  --fresh           Launches the app fresh, that is, without restoring windows. Saved persistent state is lost, excluding Untitled documents.\
+      -R, --reveal          Selects in the Finder instead of opening.\
+      -W, --wait-apps       Blocks until the used applications are closed (even if they were already running).\
+          --args            All remaining arguments are passed in argv to the application's main() function instead of opened.\
+      -n, --new             Open a new instance of the application even if one is already running.\
+      -j, --hide            Launches the app hidden.\
+      -g, --background      Does not bring the application to the foreground.\
+      -h, --header          Searches header file locations for headers matching the given filenames, and opens them.\
+      -s                    For -h, the SDK to use; if supplied, only SDKs whose names contain the argument value are searched.\
+                            Otherwise the highest versioned SDK in each platform is used.\
+      -u, --url URL         Open this URL, even if it matches exactly a filepath\
+      -i, --stdin  PATH     Launches the application with stdin connected to PATH; defaults to /dev/null\
+      -o, --stdout PATH     Launches the application with /dev/stdout connected to PATH; \
+          --stderr PATH     Launches the application with /dev/stderr connected to PATH to\
+          --env    VAR      Add an enviroment variable to the launched process, where VAR is formatted AAA=foo or just AAA for a null string value.\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+Exception in thread django-main-thread:\
+Traceback (most recent call last):\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1038, in _bootstrap_inner\
+    self.run()\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 975, in run\
+    self._target(*self._args, **self._kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper\
+    fn(*args, **kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run\
+    self.check(display_num_errors=True)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 19, in <module>\
+    from main_app import views\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 3, in <module>\
+    from .forms import FeedingForm\
+ModuleNotFoundError: No module named 'main_app.forms'\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ touch main_app/forms.py\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:03:00\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+Internal Server Error: /\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render\
+    return self.template.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 175, in render\
+    return self._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render\
+    compiled_parent = self.get_parent(context)\
+                      ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent\
+    return self.find_template(parent, context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template\
+    template, origin = context.template.engine.find_template(\
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/engine.py", line 161, in find_template\
+    raise TemplateDoesNotExist(name, tried=tried)\
+django.template.exceptions.TemplateDoesNotExist: base.html\
+\
+The above exception was the direct cause of the following exception:\
+\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 9, in finch_list\
+    return render(request, 'finch_list.html', \{'finches': finches\})\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string\
+    return template.render(context, request)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/backends/django.py", line 63, in render\
+    reraise(exc, self.backend)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/backends/django.py", line 84, in reraise\
+    raise new from exc\
+django.template.exceptions.TemplateDoesNotExist: base.html\
+[14/Sep/2023 12:03:09] 
+\f1\b \cf9 "GET / HTTP/1.1" 500 122887
+\f0\b0 \cf2 \
+Not Found: /favicon.ico\
+[14/Sep/2023 12:03:09] \cf10 "GET /favicon.ico HTTP/1.1" 404 2385\cf2 \
+/Users/rextsears/code/finchcollector/finchcollector/settings.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:10:50\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:11:05\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+Internal Server Error: /\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render\
+    return self.template.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 175, in render\
+    return self._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 132, in render\
+    compiled_parent = self.get_parent(context)\
+                      ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 129, in get_parent\
+    return self.find_template(parent, context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 107, in find_template\
+    template, origin = context.template.engine.find_template(\
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/engine.py", line 161, in find_template\
+    raise TemplateDoesNotExist(name, tried=tried)\
+django.template.exceptions.TemplateDoesNotExist: base.html\
+\
+The above exception was the direct cause of the following exception:\
+\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 9, in finch_list\
+    return render(request, 'finch_list.html', \{'finches': finches\})\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string\
+    return template.render(context, request)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/backends/django.py", line 63, in render\
+    reraise(exc, self.backend)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/backends/django.py", line 84, in reraise\
+    raise new from exc\
+django.template.exceptions.TemplateDoesNotExist: base.html\
+[14/Sep/2023 12:11:10] 
+\f1\b \cf9 "GET / HTTP/1.1" 500 122875
+\f0\b0 \cf2 \
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ touch main_app/templates/base.html\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:15:01\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 12:15:05] "GET / HTTP/1.1" 200 520\
+Internal Server Error: /finch/1/\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 13, in finch_detail\
+    return render(request, 'finch_detail.html', \{'finch': finch\})\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string\
+    return template.render(context, request)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render\
+    return self.template.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 175, in render\
+    return self._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render\
+    return compiled_parent._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render\
+    result = block.nodelist.render(context)\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render\
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)\
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse\
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix\
+    raise NoReverseMatch(msg)\
+django.urls.exceptions.NoReverseMatch: Reverse for 'add_feeding' not found. 'add_feeding' is not a valid view function or pattern name.\
+[14/Sep/2023 12:15:09] 
+\f1\b \cf9 "GET /finch/1/ HTTP/1.1" 500 153124
+\f0\b0 \cf2 \
+Internal Server Error: /finch/1/\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 13, in finch_detail\
+    return render(request, 'finch_detail.html', \{'finch': finch\})\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string\
+    return template.render(context, request)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render\
+    return self.template.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 175, in render\
+    return self._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render\
+    return compiled_parent._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render\
+    result = block.nodelist.render(context)\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render\
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)\
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse\
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix\
+    raise NoReverseMatch(msg)\
+django.urls.exceptions.NoReverseMatch: Reverse for 'add_feeding' not found. 'add_feeding' is not a valid view function or pattern name.\
+[14/Sep/2023 12:16:07] 
+\f1\b \cf9 "GET /finch/1/ HTTP/1.1" 500 153124
+\f0\b0 \cf2 \
+/Users/rextsears/code/finchcollector/finchcollector/urls.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:17:33\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 12:17:44] "GET / HTTP/1.1" 200 520\
+[14/Sep/2023 12:17:46] "GET /finch/1/ HTTP/1.1" 200 1155\
+[14/Sep/2023 12:17:51] "GET / HTTP/1.1" 200 520\
+[14/Sep/2023 12:17:53] "GET /finch/2/ HTTP/1.1" 200 1155\
+[14/Sep/2023 12:17:56] "GET / HTTP/1.1" 200 520\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+Exception in thread django-main-thread:\
+Traceback (most recent call last):\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1038, in _bootstrap_inner\
+    self.run()\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 975, in run\
+    self._target(*self._args, **self._kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper\
+    fn(*args, **kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run\
+    self.check(display_num_errors=True)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 25, in <module>\
+    path('finches/create/', FinchCreateView.as_view(), name='add_finch'),\
+                            ^^^^^^^^^^^^^^^\
+NameError: name 'FinchCreateView' is not defined\
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+Exception in thread django-main-thread:\
+Traceback (most recent call last):\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1038, in _bootstrap_inner\
+    self.run()\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 975, in run\
+    self._target(*self._args, **self._kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper\
+    fn(*args, **kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run\
+    self.check(display_num_errors=True)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 25, in <module>\
+    path('finches/create/', FinchCreateView.as_view(), name='add_finch'),\
+                            ^^^^^^^^^^^^^^^\
+NameError: name 'FinchCreateView' is not defined\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+Exception in thread django-main-thread:\
+Traceback (most recent call last):\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1038, in _bootstrap_inner\
+    self.run()\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 975, in run\
+    self._target(*self._args, **self._kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper\
+    fn(*args, **kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run\
+    self.check(display_num_errors=True)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 25, in <module>\
+    path('finches/create/', FinchCreateView.as_view(), name='add_finch'),\
+                            ^^^^^^^^^^^^^^^\
+NameError: name 'FinchCreateView' is not defined\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+Exception in thread django-main-thread:\
+Traceback (most recent call last):\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1038, in _bootstrap_inner\
+    self.run()\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 975, in run\
+    self._target(*self._args, **self._kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper\
+    fn(*args, **kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run\
+    self.check(display_num_errors=True)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 19, in <module>\
+    from main_app import views\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 8, in <module>\
+    from .views import FinchCreateView  # Replace .views with the actual path if necessary\
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+ImportError: cannot import name 'FinchCreateView' from partially initialized module 'main_app.views' (most likely due to a circular import) (/Users/rextsears/code/finchcollector/main_app/views.py)\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+Exception in thread django-main-thread:\
+Traceback (most recent call last):\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1038, in _bootstrap_inner\
+    self.run()\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 975, in run\
+    self._target(*self._args, **self._kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper\
+    fn(*args, **kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run\
+    self.check(display_num_errors=True)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 20, in <module>\
+    from .views import FinchCreateView, FinchUpdateView, FinchDeleteView\
+ModuleNotFoundError: No module named 'finchcollector.views'\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ >....                                  \
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns                                                        \
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__                                         \
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module                  \
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)              \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^              \
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import            \
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load         \
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked      \
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module     \
+  File                                                                        \
+zsh: no matches found: [main]\
+zsh: command not found: Watching\
+zsh: command not found: Performing\
+zsh: command not found: Exception\
+zsh: no matches found: (most recent call last):\
+/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py,: cannot open `/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py,' (No such file or directory)\
+line:                                                                                                             cannot open `line' (No such file or directory)\
+1038,:                                                                                                            cannot open `1038,' (No such file or directory)\
+in:                                                                                                               cannot open `in' (No such file or directory)\
+_bootstrap_inner:                                                                                                 cannot open `_bootstrap_inner' (No such file or directory)\
+zsh: invalid mode specification\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:30:33\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 12:30:38] "GET / HTTP/1.1" 200 520\
+[14/Sep/2023 12:30:40] "GET /finch/1/ HTTP/1.1" 200 1155\
+[14/Sep/2023 12:30:46] "GET / HTTP/1.1" 200 520\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ touch main_app/templates/finch_create.html\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ touch main_app/templates/finch_edit.html\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ touch main_app/templates/finch_confirm_delete.html\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:38:20\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 12:38:23] "GET / HTTP/1.1" 200 520\
+[14/Sep/2023 12:38:25] "GET /finch/1/ HTTP/1.1" 200 1409\
+[14/Sep/2023 12:38:28] "GET /finches/1/edit/ HTTP/1.1" 200 1228\
+[14/Sep/2023 12:38:31] "GET / HTTP/1.1" 200 520\
+[14/Sep/2023 12:38:32] "GET /finch/1/ HTTP/1.1" 200 1409\
+[14/Sep/2023 12:38:34] "GET /finches/1/delete/ HTTP/1.1" 200 712\
+[14/Sep/2023 12:38:36] "GET / HTTP/1.1" 200 520\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:42:23\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 12:42:26] "GET / HTTP/1.1" 200 392\
+[14/Sep/2023 12:42:27] "GET /finch/1/ HTTP/1.1" 200 1151\
+Internal Server Error: /finch/1/add-feeding/\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 44, in add_feeding\
+    return render(request, 'add_feeding.html', \{'finch': finch, 'form': form\})\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string\
+    template = get_template(template_name, using=using)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template\
+    raise TemplateDoesNotExist(template_name, chain=chain)\
+django.template.exceptions.TemplateDoesNotExist: add_feeding.html\
+[14/Sep/2023 12:42:35] 
+\f1\b \cf9 "POST /finch/1/add-feeding/ HTTP/1.1" 500 75118
+\f0\b0 \cf2 \
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ touch main_app/templates/add_feeding.html\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:44:50\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 12:44:55] "GET / HTTP/1.1" 200 392\
+[14/Sep/2023 12:44:57] "GET /finch/1/ HTTP/1.1" 200 1151\
+[14/Sep/2023 12:45:03] "POST /finch/1/add-feeding/ HTTP/1.1" 200 1138\
+[14/Sep/2023 12:45:11] "GET /finch/1/ HTTP/1.1" 200 1151\
+[14/Sep/2023 12:45:27] "POST /finch/1/add-feeding/ HTTP/1.1" 200 1138\
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:52:38\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:52:48\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 12:52:53] "GET / HTTP/1.1" 200 392\
+[14/Sep/2023 12:52:55] "GET /finch/1/ HTTP/1.1" 200 1151\
+[14/Sep/2023 12:53:00] "POST /finch/1/add-feeding/ HTTP/1.1" 200 1138\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:57:00\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 12:57:04] "GET / HTTP/1.1" 200 392\
+[14/Sep/2023 12:57:06] "GET /finch/1/ HTTP/1.1" 200 1151\
+Internal Server Error: /finch/1/add-feeding/\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 44, in add_feeding\
+    return render(request, 'add_feeding.html', \{'finch': finch, 'form': form\})\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string\
+    template = get_template(template_name, using=using)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template\
+    raise TemplateDoesNotExist(template_name, chain=chain)\
+django.template.exceptions.TemplateDoesNotExist: add_feeding.html\
+[14/Sep/2023 12:57:10] 
+\f1\b \cf9 "POST /finch/1/add-feeding/ HTTP/1.1" 500 75280
+\f0\b0 \cf2 \
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 12:58:26\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 12:58:30] "GET / HTTP/1.1" 200 392\
+[14/Sep/2023 12:58:32] "GET /finch/1/ HTTP/1.1" 200 1130\
+[14/Sep/2023 12:58:36] "POST /finch/1/ HTTP/1.1" 200 1130\
+[14/Sep/2023 12:59:13] "GET /finch/1/ HTTP/1.1" 200 1130\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 13:09:40\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 13:09:48] "GET / HTTP/1.1" 200 392\
+[14/Sep/2023 13:09:50] "GET /finch/1/ HTTP/1.1" 200 1130\
+[14/Sep/2023 13:09:55] "POST /finch/1/ HTTP/1.1" 200 1130\
+[14/Sep/2023 13:10:00] "GET /finch/1/ HTTP/1.1" 200 1130\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 13:11:56\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 13:12:01] "GET // HTTP/1.1" 200 392\
+[14/Sep/2023 13:12:02] "GET /finch/1/ HTTP/1.1" 200 1151\
+[14/Sep/2023 13:12:11] "POST /finch/1/add-feeding/ HTTP/1.1" 200 1151\
+[14/Sep/2023 13:12:13] "GET /finch/1/add-feeding/ HTTP/1.1" 200 1151\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 14, 2023 - 13:14:16\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[14/Sep/2023 13:14:20] "GET / HTTP/1.1" 200 392\
+[14/Sep/2023 13:14:22] "GET /finch/1/ HTTP/1.1" 200 1151\
+[14/Sep/2023 13:14:26] "POST /finch/1/add-feeding/ HTTP/1.1" 200 1151\
+[14/Sep/2023 13:14:29] "GET /finch/1/add-feeding/ HTTP/1.1" 200 1151\
+[14/Sep/2023 13:14:33] "GET /finch/1/ HTTP/1.1" 200 1151\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 -m django --version\
+4.2.5\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ git add -A\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ git commit -m "parts 3 & 4"\
+[main 7e88cc7] parts 3 & 4\
+ 11 files changed, 165 insertions(+), 6 deletions(-)\
+ create mode 100644 main_app/forms.py\
+ create mode 100644 main_app/migrations/0002_feeding.py\
+ create mode 100644 main_app/templates/base.html\
+ create mode 100644 main_app/templates/finch_confirm_delete.html\
+ create mode 100644 main_app/templates/finch_create.html\
+ create mode 100644 main_app/templates/finch_edit.html\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ git push -u origin main\
+Enumerating objects: 27, done.\
+Counting objects: 100% (27/27), done.\
+Delta compression using up to 8 threads\
+Compressing objects: 100% (17/17), done.\
+Writing objects: 100% (17/17), 3.76 KiB | 3.76 MiB/s, done.\
+Total 17 (delta 4), reused 0 (delta 0), pack-reused 0\
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.\
+To https://github.com/rextsears/finchcollector.git\
+   9150205..7e88cc7  main -> main\
+branch 'main' set up to track 'origin/main'.\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py makemigrations\
+Traceback (most recent call last):\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 22, in <module>\
+    main()\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 18, in main\
+    execute_from_command_line(sys.argv)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line\
+    utility.execute()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 416, in execute\
+    django.setup()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/__init__.py", line 24, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/apps/registry.py", line 116, in populate\
+    app_config.import_models()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/apps/config.py", line 269, in import_models\
+    self.models_module = import_module(models_module_name)\
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/main_app/models.py", line 4, in <module>\
+    class Finch(models.Model):\
+  File "/Users/rextsears/code/finchcollector/main_app/models.py", line 8, in Finch\
+    toys = models.ManyToManyField(Toy, blank=True)  # Many-to-Many relationship with Toy\
+                                  ^^^\
+NameError: name 'Toy' is not defined\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py makemigrations\
+Traceback (most recent call last):\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 22, in <module>\
+    main()\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 18, in main\
+    execute_from_command_line(sys.argv)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line\
+    utility.execute()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 416, in execute\
+    django.setup()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/__init__.py", line 24, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/apps/registry.py", line 116, in populate\
+    app_config.import_models()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/apps/config.py", line 269, in import_models\
+    self.models_module = import_module(models_module_name)\
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/main_app/models.py", line 4, in <module>\
+    class Finch(models.Model):\
+  File "/Users/rextsears/code/finchcollector/main_app/models.py", line 8, in Finch\
+    toys = models.ManyToManyField(Toy, blank=True)  # Many-to-Many relationship with Toy\
+                                  ^^^\
+NameError: name 'Toy' is not defined\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py makemigrations\
+Traceback (most recent call last):\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 22, in <module>\
+    main()\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 18, in main\
+    execute_from_command_line(sys.argv)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line\
+    utility.execute()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 436, in execute\
+    self.fetch_command(subcommand).run_from_argv(self.argv)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 412, in run_from_argv\
+    self.execute(*args, **cmd_options)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 453, in execute\
+    self.check()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 19, in <module>\
+    from main_app import views\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 4, in <module>\
+    from .forms import FinchForm, FeedingForm, ToyForm\
+ImportError: cannot import name 'ToyForm' from 'main_app.forms' (/Users/rextsears/code/finchcollector/main_app/forms.py)\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py makemigrations\
+
+\f1\b \cf6 Migrations for 'main_app':
+\f0\b0 \cf2 \
+  
+\f1\b main_app/migrations/0003_toy_finch_toys.py
+\f0\b0 \
+    - Create model Toy\
+    - Add field toys to finch\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py migrate\
+
+\f1\b \cf6 Operations to perform:
+\f0\b0 \cf2 \
+
+\f1\b   Apply all migrations: 
+\f0\b0 admin, auth, contenttypes, main_app, sessions\
+
+\f1\b \cf6 Running migrations:
+\f0\b0 \cf2 \
+  Applying main_app.0003_toy_finch_toys...
+\f1\b \cf7  OK
+\f0\b0 \cf2 \
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 13:55:54\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 13:56:03] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 13:56:05] "GET /finch/1/ HTTP/1.1" 200 1698\
+Internal Server Error: /toys/create/\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view\
+    return self.dispatch(request, *args, **kwargs)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch\
+    return handler(request, *args, **kwargs)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post\
+    return super().post(request, *args, **kwargs)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/edit.py", line 151, in post\
+    form = self.get_form()\
+           ^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/edit.py", line 38, in get_form\
+    form_class = self.get_form_class()\
+                 ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/edit.py", line 86, in get_form_class\
+    raise ImproperlyConfigured(\
+django.core.exceptions.ImproperlyConfigured: Specifying both 'fields' and 'form_class' is not permitted.\
+[15/Sep/2023 13:56:27] 
+\f1\b \cf9 "POST /toys/create/ HTTP/1.1" 500 81989
+\f0\b0 \cf2 \
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 13:57:16\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 13:57:22] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 13:57:24] "GET /finch/1/ HTTP/1.1" 200 1698\
+[15/Sep/2023 13:57:32] \cf7 "POST /toys/create/ HTTP/1.1" 302 0\cf2 \
+Not Found: /toys/\
+[15/Sep/2023 13:57:32] \cf10 "GET /toys/ HTTP/1.1" 404 3085\cf2 \
+[15/Sep/2023 13:58:12] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 13:58:14] "GET /finch/1/ HTTP/1.1" 200 1698\
+Not Found: /finch/\
+[15/Sep/2023 13:59:57] \cf10 "GET /finch/ HTTP/1.1" 404 3088\cf2 \
+[15/Sep/2023 14:00:02] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:00:03] "GET /finch/1/ HTTP/1.1" 200 1698\
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:00:17\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver           \
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:00:38\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:00:43] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:00:45] "GET /finch/1/ HTTP/1.1" 200 1698\
+[15/Sep/2023 14:00:51] \cf7 "POST /toys/create/ HTTP/1.1" 302 0\cf2 \
+[15/Sep/2023 14:00:51] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:00:53] "GET /finch/1/ HTTP/1.1" 200 1698\
+[15/Sep/2023 14:04:15] "POST /finch/1/add-feeding/ HTTP/1.1" 200 1698\
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:05:59\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:06:04] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:06:06] "GET /finch/1/ HTTP/1.1" 200 1698\
+[15/Sep/2023 14:06:11] "POST /finch/1/add-feeding/ HTTP/1.1" 200 1698\
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:07:17\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:07:22] "GET / HTTP/1.1" 200 392\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:07:32\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:07:35] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:07:36] "GET /finch/1/ HTTP/1.1" 200 1698\
+Internal Server Error: /finch/1/add-feeding/\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 38, in add_feeding\
+    form = FeedingForm(request.POST, instance=None, finch_id=finch_id)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+TypeError: BaseForm.__init__() got an unexpected keyword argument 'instance'\
+[15/Sep/2023 14:07:43] 
+\f1\b \cf9 "POST /finch/1/add-feeding/ HTTP/1.1" 500 61342
+\f0\b0 \cf2 \
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:08:29\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:08:38\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:08:46] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:08:48] "GET /finch/1/ HTTP/1.1" 200 1698\
+[15/Sep/2023 14:08:52] "POST /finch/1/add-feeding/ HTTP/1.1" 200 1698\
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:09:51\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:09:59\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:10:03] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:10:05] "GET /finch/1/ HTTP/1.1" 200 1698\
+[15/Sep/2023 14:10:10] "POST /finch/1/add-feeding/ HTTP/1.1" 200 1698\
+/Users/rextsears/code/finchcollector/main_app/forms.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+Exception in thread django-main-thread:\
+Traceback (most recent call last):\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1038, in _bootstrap_inner\
+    self.run()\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 975, in run\
+    self._target(*self._args, **self._kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper\
+    fn(*args, **kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run\
+    self.check(display_num_errors=True)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 19, in <module>\
+    from main_app import views\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 4, in <module>\
+    from .forms import FinchForm, FeedingForm, ToyForm\
+  File "/Users/rextsears/code/finchcollector/main_app/forms.py", line 9, in <module>\
+    class FeedingForm(forms.ModelForm):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/forms/models.py", line 321, in __new__\
+    raise FieldError(message)\
+django.core.exceptions.FieldError: Unknown field(s) (feeding_date, notes) specified for Feeding\
+/Users/rextsears/code/finchcollector/main_app/models.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:14:19\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:14:27] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:14:29] "GET /finch/1/ HTTP/1.1" 200 1698\
+[15/Sep/2023 14:14:33] "POST /finch/1/add-feeding/ HTTP/1.1" 200 1698\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:19:39\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:19:43] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:19:45] "GET /finch/1/ HTTP/1.1" 200 1828\
+[15/Sep/2023 14:19:54] "POST /finch/1/add-feeding/ HTTP/1.1" 200 1828\
+/Users/rextsears/code/finchcollector/main_app/models.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:24:41\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:24:51\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:24:56] "GET / HTTP/1.1" 200 392\
+Internal Server Error: /finch/1/\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute\
+    return self.cursor.execute(sql, params)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+psycopg2.errors.UndefinedColumn: column main_app_feeding.feeding_date does not exist\
+LINE 1: SELECT "main_app_feeding"."id", "main_app_feeding"."feeding_...\
+                                        ^\
+\
+\
+The above exception was the direct cause of the following exception:\
+\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 14, in finch_detail\
+    return render(request, 'finch_detail.html', \{'finch': finch\})\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string\
+    return template.render(context, request)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render\
+    return self.template.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 175, in render\
+    return self._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render\
+    return compiled_parent._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render\
+    result = block.nodelist.render(context)\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/defaulttags.py", line 194, in render\
+    len_values = len(values)\
+                 ^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__\
+    self._fetch_all()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all\
+    self._result_cache = list(self._iterable_class(self))\
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__\
+    results = compiler.execute_sql(\
+              ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql\
+    cursor.execute(sql, params)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute\
+    return super().execute(sql, params)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute\
+    return self._execute_with_wrappers(\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers\
+    return executor(sql, params, many, context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute\
+    with self.db.wrap_database_errors:\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__\
+    raise dj_exc_value.with_traceback(traceback) from exc_value\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute\
+    return self.cursor.execute(sql, params)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+django.db.utils.ProgrammingError: column main_app_feeding.feeding_date does not exist\
+LINE 1: SELECT "main_app_feeding"."id", "main_app_feeding"."feeding_...\
+                                        ^\
+\
+[15/Sep/2023 14:24:57] 
+\f1\b \cf9 "GET /finch/1/ HTTP/1.1" 500 196343
+\f0\b0 \cf2 \
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py makemigrations\
+It is impossible to add a non-nullable field 'feeding_date' to feeding without specifying a default. This is because the database needs something to populate existing rows.\
+Please select a fix:\
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)\
+ 2) Quit and manually define a default value in models.py.\
+Select an option: ^CTraceback (most recent call last):\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 22, in <module>\
+    main()\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 18, in main\
+    execute_from_command_line(sys.argv)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line\
+    utility.execute()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 436, in execute\
+    self.fetch_command(subcommand).run_from_argv(self.argv)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 412, in run_from_argv\
+    self.execute(*args, **cmd_options)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 458, in execute\
+    output = self.handle(*args, **options)\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 106, in wrapper\
+    res = handle_func(*args, **kwargs)\
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/makemigrations.py", line 233, in handle\
+    changes = autodetector.changes(\
+              ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/migrations/autodetector.py", line 46, in changes\
+    changes = self._detect_changes(convert_apps, graph)\
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/migrations/autodetector.py", line 196, in _detect_changes\
+    self.generate_added_fields()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/migrations/autodetector.py", line 1026, in generate_added_fields\
+    self._generate_added_field(app_label, model_name, field_name)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/migrations/autodetector.py", line 1059, in _generate_added_field\
+    field.default = self.questioner.ask_not_null_addition(\
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/migrations/questioner.py", line 169, in ask_not_null_addition\
+    choice = self._choice_input(\
+             ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/db/migrations/questioner.py", line 114, in _choice_input\
+    result = input()\
+             ^^^^^^^\
+KeyboardInterrupt\
+\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py makemigrations\
+Traceback (most recent call last):\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 22, in <module>\
+    main()\
+  File "/Users/rextsears/code/finchcollector/manage.py", line 18, in main\
+    execute_from_command_line(sys.argv)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 442, in execute_from_command_line\
+    utility.execute()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/__init__.py", line 416, in execute\
+    django.setup()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/__init__.py", line 24, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/apps/registry.py", line 116, in populate\
+    app_config.import_models()\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/apps/config.py", line 269, in import_models\
+    self.models_module = import_module(models_module_name)\
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/main_app/models.py", line 19, in <module>\
+    class Feeding(models.Model):\
+  File "/Users/rextsears/code/finchcollector/main_app/models.py", line 20, in Feeding\
+    feeding_date = models.DateField(verbose_name='Feeding Date', default=timezone.now)\
+                                                                         ^^^^^^^^\
+NameError: name 'timezone' is not defined\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ \
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py makemigrations\
+It is impossible to add a non-nullable field 'notes' to feeding without specifying a default. This is because the database needs something to populate existing rows.\
+Please select a fix:\
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)\
+ 2) Quit and manually define a default value in models.py.\
+Select an option: 1\
+Please enter the default value as valid Python.\
+The datetime and django.utils.timezone modules are available, so it is possible to provide e.g. timezone.now as a value.\
+Type 'exit' to exit this prompt\
+>>> None\
+
+\f1\b \cf6 Migrations for 'main_app':
+\f0\b0 \cf2 \
+  
+\f1\b main_app/migrations/0004_remove_feeding_date_feeding_feeding_date_and_more.py
+\f0\b0 \
+    - Remove field date from feeding\
+    - Add field feeding_date to feeding\
+    - Add field notes to feeding\
+    - Alter field food_type on feeding\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py migrate\
+
+\f1\b \cf6 Operations to perform:
+\f0\b0 \cf2 \
+
+\f1\b   Apply all migrations: 
+\f0\b0 admin, auth, contenttypes, main_app, sessions\
+
+\f1\b \cf6 Running migrations:
+\f0\b0 \cf2 \
+  Applying main_app.0004_remove_feeding_date_feeding_feeding_date_and_more...
+\f1\b \cf7  OK
+\f0\b0 \cf2 \
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:29:35\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:29:40] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:29:41] "GET /finch/1/ HTTP/1.1" 200 1828\
+[15/Sep/2023 14:29:53] \cf7 "POST /finch/1/add-feeding/ HTTP/1.1" 302 0\cf2 \
+[15/Sep/2023 14:29:53] "GET /finch/1/ HTTP/1.1" 200 1800\
+[15/Sep/2023 14:30:07] \cf7 "POST /toys/create/ HTTP/1.1" 302 0\cf2 \
+[15/Sep/2023 14:30:07] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:30:08] "GET /finch/1/ HTTP/1.1" 200 1800\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:38:48\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:38:53] "GET / HTTP/1.1" 200 392\
+Internal Server Error: /finch/1/\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 15, in finch_detail\
+    finch = get_object_or_404(Finch, pk=finch_id)\
+            ^^^^^^^^^^^^^^^^^\
+NameError: name 'get_object_or_404' is not defined\
+[15/Sep/2023 14:38:54] 
+\f1\b \cf9 "GET /finch/1/ HTTP/1.1" 500 59693
+\f0\b0 \cf2 \
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:39:33\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:39:36] "GET /finch/1/ HTTP/1.1" 200 1800\
+Internal Server Error: /toys/create/\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view\
+    return self.dispatch(request, *args, **kwargs)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch\
+    return handler(request, *args, **kwargs)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post\
+    return super().post(request, *args, **kwargs)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post\
+    return self.form_valid(form)\
+           ^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 56, in form_valid\
+    return super().form_valid(form)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/edit.py", line 136, in form_valid\
+    return super().form_valid(form)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/views/generic/edit.py", line 65, in form_valid\
+    return HttpResponseRedirect(self.get_success_url())\
+                                ^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 60, in get_success_url\
+    return reverse('finch_detail', args=[self.kwargs['finch_id']])\
+                                         ~~~~~~~~~~~^^^^^^^^^^^^\
+KeyError: 'finch_id'\
+[15/Sep/2023 14:39:43] 
+\f1\b \cf9 "POST /toys/create/ HTTP/1.1" 500 88854
+\f0\b0 \cf2 \
+/Users/rextsears/code/finchcollector/finchcollector/urls.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+Exception in thread django-main-thread:\
+Traceback (most recent call last):\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1038, in _bootstrap_inner\
+    self.run()\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 975, in run\
+    self._target(*self._args, **self._kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper\
+    fn(*args, **kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run\
+    self.check(display_num_errors=True)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 30, in <module>\
+    path('toys/create/<int:finch_id>/', ToyCreateView.as_view(), name='toy_create'),\
+                                        ^^^^^^^^^^^^^\
+NameError: name 'ToyCreateView' is not defined. Did you mean: 'FinchCreateView'?\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+Exception in thread django-main-thread:\
+Traceback (most recent call last):\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1038, in _bootstrap_inner\
+    self.run()\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 975, in run\
+    self._target(*self._args, **self._kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper\
+    fn(*args, **kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run\
+    self.check(display_num_errors=True)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 30, in <module>\
+    path('toys/create/<int:finch_id>/', ToyCreateView.as_view(), name='toy_create'),\
+                                        ^^^^^^^^^^^^^\
+NameError: name 'ToyCreateView' is not defined. Did you mean: 'FinchCreateView'?\
+/Users/rextsears/code/finchcollector/finchcollector/urls.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:42:34\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:42:40] "GET / HTTP/1.1" 200 392\
+Internal Server Error: /finch/1/\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 15, in finch_detail\
+    return render(request, 'finch_detail.html', \{'finch': finch\})\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string\
+    return template.render(context, request)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render\
+    return self.template.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 175, in render\
+    return self._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render\
+    return compiled_parent._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render\
+    result = block.nodelist.render(context)\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render\
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)\
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse\
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix\
+    raise NoReverseMatch(msg)\
+django.urls.exceptions.NoReverseMatch: Reverse for 'add_toy' not found. 'add_toy' is not a valid view function or pattern name.\
+[15/Sep/2023 14:42:42] 
+\f1\b \cf9 "GET /finch/1/ HTTP/1.1" 500 155355
+\f0\b0 \cf2 \
+/Users/rextsears/code/finchcollector/finchcollector/urls.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+Exception in thread django-main-thread:\
+Traceback (most recent call last):\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1038, in _bootstrap_inner\
+    self.run()\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 975, in run\
+    self._target(*self._args, **self._kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper\
+    fn(*args, **kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run\
+    self.check(display_num_errors=True)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 31, in <module>\
+    path('add_toy/', views.add_toy_view, name='add_toy'), \
+                     ^^^^^^^^^^^^^^^^^^\
+AttributeError: module 'main_app.views' has no attribute 'add_toy_view'\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+Exception in thread django-main-thread:\
+Traceback (most recent call last):\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 1038, in _bootstrap_inner\
+    self.run()\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/threading.py", line 975, in run\
+    self._target(*self._args, **self._kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/autoreload.py", line 64, in wrapper\
+    fn(*args, **kwargs)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/commands/runserver.py", line 133, in inner_run\
+    self.check(display_num_errors=True)\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/management/base.py", line 485, in check\
+    all_issues = checks.run_checks(\
+                 ^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/registry.py", line 88, in run_checks\
+    new_errors = check(app_configs=app_configs, databases=databases)\
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    return check_method()\
+           ^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 494, in check\
+    for pattern in self.url_patterns:\
+                   ^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 715, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+                       ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/utils/functional.py", line 57, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+                                         ^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 708, in urlconf_module\
+    return import_module(self.urlconf_name)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py", line 126, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module\
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed\
+  File "/Users/rextsears/code/finchcollector/finchcollector/urls.py", line 31, in <module>\
+    path('add_toy/', views.add_toy_view, name='add_toy'), \
+                     ^^^^^^^^^^^^^^^^^^\
+AttributeError: module 'main_app.views' has no attribute 'add_toy_view'\
+/Users/rextsears/code/finchcollector/finchcollector/urls.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:44:17\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:44:22] "GET / HTTP/1.1" 200 392\
+Internal Server Error: /finch/1/\
+Traceback (most recent call last):\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner\
+    response = get_response(request)\
+               ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/Users/rextsears/code/finchcollector/main_app/views.py", line 15, in finch_detail\
+    return render(request, 'finch_detail.html', \{'finch': finch\})\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader.py", line 62, in render_to_string\
+    return template.render(context, request)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/backends/django.py", line 61, in render\
+    return self.template.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 175, in render\
+    return self._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 157, in render\
+    return compiled_parent._render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 167, in _render\
+    return self.nodelist.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/loader_tags.py", line 63, in render\
+    result = block.nodelist.render(context)\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in render\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 1005, in <listcomp>\
+    return SafeString("".join([node.render_annotated(context) for node in self]))\
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/base.py", line 966, in render_annotated\
+    return self.render(context)\
+           ^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/template/defaulttags.py", line 471, in render\
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)\
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/base.py", line 88, in reverse\
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)\
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/homebrew/lib/python3.11/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix\
+    raise NoReverseMatch(msg)\
+django.urls.exceptions.NoReverseMatch: Reverse for 'add_toy' not found. 'add_toy' is not a valid view function or pattern name.\
+[15/Sep/2023 14:44:23] 
+\f1\b \cf9 "GET /finch/1/ HTTP/1.1" 500 155355
+\f0\b0 \cf2 \
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:47:08\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:47:13] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:47:15] "GET /finch/1/ HTTP/1.1" 200 1802\
+[15/Sep/2023 14:47:22] \cf7 "POST /toys/create/1/ HTTP/1.1" 302 0\cf2 \
+[15/Sep/2023 14:47:22] "GET /finch/1/ HTTP/1.1" 200 1802\
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:53:54\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:53:59] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:54:01] "GET /finch/1/ HTTP/1.1" 200 1804\
+[15/Sep/2023 14:54:09] \cf7 "POST /finch/1/add-toy/ HTTP/1.1" 302 0\cf2 \
+[15/Sep/2023 14:54:09] "GET /finch/1/ HTTP/1.1" 200 1804\
+[15/Sep/2023 14:54:20] "GET /finches/1/edit/ HTTP/1.1" 200 1401\
+[15/Sep/2023 14:54:29] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:54:30] "GET /finch/1/ HTTP/1.1" 200 1804\
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 14:58:23\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 14:58:27] "GET /finch/1/ HTTP/1.1" 200 1804\
+[15/Sep/2023 14:58:29] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:58:31] "GET /finch/1/ HTTP/1.1" 200 1804\
+[15/Sep/2023 14:58:36] "GET /finches/1/edit/ HTTP/1.1" 200 1401\
+[15/Sep/2023 14:58:41] \cf7 "POST /finches/1/edit/ HTTP/1.1" 302 0\cf2 \
+Not Found: /finches/\
+[15/Sep/2023 14:58:41] \cf10 "GET /finches/ HTTP/1.1" 404 3269\cf2 \
+[15/Sep/2023 14:58:42] "GET /finches/1/edit/ HTTP/1.1" 200 1437\
+[15/Sep/2023 14:59:10] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:59:11] "GET /finch/1/ HTTP/1.1" 200 1910\
+[15/Sep/2023 14:59:17] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:59:19] "GET /finch/2/ HTTP/1.1" 200 1832\
+[15/Sep/2023 14:59:24] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:59:24] "GET /finch/1/ HTTP/1.1" 200 1910\
+[15/Sep/2023 14:59:30] "GET / HTTP/1.1" 200 392\
+[15/Sep/2023 14:59:31] "GET /finch/2/ HTTP/1.1" 200 1832\
+[15/Sep/2023 14:59:33] "GET /finches/2/delete/ HTTP/1.1" 200 530\
+[15/Sep/2023 14:59:35] \cf7 "POST /finches/2/delete/ HTTP/1.1" 302 0\cf2 \
+Not Found: /finches/\
+[15/Sep/2023 14:59:35] \cf10 "GET /finches/ HTTP/1.1" 404 3269\cf2 \
+/Users/rextsears/code/finchcollector/finchcollector/urls.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 15:00:28\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 15:00:31] "GET // HTTP/1.1" 200 327\
+[15/Sep/2023 15:00:45] "GET /finch/1/ HTTP/1.1" 200 1918\
+[15/Sep/2023 15:00:56] "GET /finches/1/edit/ HTTP/1.1" 200 1445\
+[15/Sep/2023 15:00:58] \cf7 "POST /finches/1/edit/ HTTP/1.1" 302 0\cf2 \
+[15/Sep/2023 15:00:58] "GET /finches/ HTTP/1.1" 200 327\
+[15/Sep/2023 15:01:00] "GET /finch/1/ HTTP/1.1" 200 1918\
+[15/Sep/2023 15:01:02] "GET /finches/1/edit/ HTTP/1.1" 200 1445\
+[15/Sep/2023 15:01:03] \cf7 "POST /finches/1/edit/ HTTP/1.1" 302 0\cf2 \
+[15/Sep/2023 15:01:03] "GET /finches/ HTTP/1.1" 200 327\
+[15/Sep/2023 15:01:05] "GET /finch/1/ HTTP/1.1" 200 1804\
+[15/Sep/2023 15:01:06] "GET /finches/1/edit/ HTTP/1.1" 200 1418\
+[15/Sep/2023 15:01:10] "GET /finches/ HTTP/1.1" 200 327\
+[15/Sep/2023 15:01:11] "GET /finch/1/ HTTP/1.1" 200 1804\
+[15/Sep/2023 15:01:14] "GET /finches/ HTTP/1.1" 200 327\
+/Users/rextsears/code/finchcollector/main_app/views.py changed, reloading.\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 15:02:11\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ git add -A\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ git commit -m "part 5"\
+[main 3a8965f] part 5\
+ 7 files changed, 154 insertions(+), 23 deletions(-)\
+ create mode 100644 main_app/migrations/0003_toy_finch_toys.py\
+ create mode 100644 main_app/migrations/0004_remove_feeding_date_feeding_feeding_date_and_more.py\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ git push -u origin main\
+Enumerating objects: 23, done.\
+Counting objects: 100% (23/23), done.\
+Delta compression using up to 8 threads\
+Compressing objects: 100% (13/13), done.\
+Writing objects: 100% (13/13), 2.89 KiB | 2.89 MiB/s, done.\
+Total 13 (delta 8), reused 0 (delta 0), pack-reused 0\
+remote: Resolving deltas: 100% (8/8), completed with 7 local objects.\
+To https://github.com/rextsears/finchcollector.git\
+   7e88cc7..3a8965f  main -> main\
+branch 'main' set up to track 'origin/main'.\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ python3 manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+September 15, 2023 - 15:05:28\
+Django version 4.2.5, using settings 'finchcollector.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+\
+[15/Sep/2023 15:05:31] "GET /finches/ HTTP/1.1" 200 335\
+[15/Sep/2023 15:05:33] "GET /finches/ HTTP/1.1" 200 335\
+[15/Sep/2023 15:05:46] "GET /finch/1/ HTTP/1.1" 200 1812\
+[15/Sep/2023 15:05:48] "GET /finches/ HTTP/1.1" 200 335\
+[15/Sep/2023 15:06:26] "GET /finches/ HTTP/1.1" 200 412\
+[15/Sep/2023 15:06:29] "GET /finches/create/ HTTP/1.1" 200 1423\
+[15/Sep/2023 15:06:35] "GET /finches/ HTTP/1.1" 200 412\
+[15/Sep/2023 15:06:37] "GET /finch/1/ HTTP/1.1" 200 1889\
+[15/Sep/2023 15:06:39] "GET /finches/ HTTP/1.1" 200 412\
+[15/Sep/2023 15:06:57] "GET /finches/create/ HTTP/1.1" 200 1423\
+[15/Sep/2023 15:07:01] "GET /finches/ HTTP/1.1" 200 412\
+[15/Sep/2023 15:07:02] "GET /finch/1/ HTTP/1.1" 200 1889\
+[15/Sep/2023 15:07:07] "GET /finch/1/ HTTP/1.1" 200 1889\
+[15/Sep/2023 15:07:18] "GET / HTTP/1.1" 200 412\
+[15/Sep/2023 15:07:20] "GET /finches/create/ HTTP/1.1" 200 1423\
+[15/Sep/2023 15:08:32] \cf7 "POST /finches/create/ HTTP/1.1" 302 0\cf2 \
+[15/Sep/2023 15:08:32] "GET /finches/ HTTP/1.1" 200 475\
+[15/Sep/2023 15:08:35] "GET /finch/3/ HTTP/1.1" 200 1943\
+[15/Sep/2023 15:08:39] "GET /finches/ HTTP/1.1" 200 475\
+^C
+\f1\b \cf8 \cb2 %
+\f0\b0 \cf2 \cb1                                                                              \cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ git add -A\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ git commit -m "part 5"\
+[main 07d5655] part 5\
+ 1 file changed, 2 insertions(+), 1 deletion(-)\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ git push -u origin main\
+Enumerating objects: 9, done.\
+Counting objects: 100% (9/9), done.\
+Delta compression using up to 8 threads\
+Compressing objects: 100% (5/5), done.\
+Writing objects: 100% (5/5), 503 bytes | 503.00 KiB/s, done.\
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0\
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.\
+To https://github.com/rextsears/finchcollector.git\
+   3a8965f..07d5655  main -> main\
+branch 'main' set up to track 'origin/main'.\
+\cf3 rextsears \cf4 ~/code/finchcollector \cf5 [main]\cf2  $ \
+}
